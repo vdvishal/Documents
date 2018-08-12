@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+    body{
+        background: rgba(205, 213, 218, 0.589)
+    }
+    .head{
+        margin: 10px;
+        background: rgb(137, 186, 209);
+        padding: 20px;
+        border-radius: 10px;
+        font-weight: 800;
+    }
+    .custom {
+        margin: 20px;
+        color: darkblue
+    }
+
+
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+        <nav class="navbar navbar-light bg-light">
+                <div class="navbar-brand" style="font-weight: 900">Events Documentation</div>
+        </nav>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist" >
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Listen</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Emit</a>
+                </li>
+              </ul>
+              <div class="tab-content cont" id="myTabContent">
+                <div class="tab-pane fade show active container" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="head">join-room</div>
+                    <p class="custom">This event ("join-room") listen to users joining a room dynamically.</p>
+
+                    <div class="head">leave-room</div>
+                    <p class="custom">This event ("leave-room") listen to users leaving a room. </p>
+
+                    <div class="head">chat-msg</div>
+                    <p class="custom">This event ("chat-msg") listen to users sending chat messages to a room. </p>
+                
+                    <div class="head">typing</div>
+                    <p class="custom">This event ("typing") listen to users typing a message. </p>
+                </div>
+                <div class="tab-pane fade container" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="head">notify</div>
+                        <p class="custom">This event ("notify") emits to users if someone joins or leaves a room. </p>
+    
+                        <div class="head">new-msg</div>
+                        <p class="custom">This event ("new-msg") emits to new messages to users in a room. <br>
+                                 Output: <br>
+                                                             {<br>
+                                                           chatId: 'unique chat id',<br>
+                                                           message: 'you message',<br>
+                                                           createdOn: date, <br>
+                                                           senderName: 'first name of sender'<br>
+                                                           roomId: Id of the room <br>
+                                                       } <br>
+
+                         </p>
+    
+                        <div class="head">typing</div>
+                        <p class="custom"> This event ("typing") emits to user in the room if some user is typing in a room. </p>
+                </div>
+            </div>
+
+
+
+              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
